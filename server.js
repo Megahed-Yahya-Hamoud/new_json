@@ -6,6 +6,8 @@ const router = jsonServer.router("db.json");
 // Make sure to use the default middleware
 const middlewares = jsonServer.defaults();
 
+server.use(express.static('./public'));
+
 server.use(middlewares);
 // Add this before server.use(router)
 server.use(
